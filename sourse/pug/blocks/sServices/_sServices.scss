@@ -1,0 +1,183 @@
+// start .sServices
+.sServices {
+	--sPT: #{rem(7)};
+	--sPB: ;
+	--sTPB: ;
+
+	.section-title {
+		@include media-breakpoint-up(lg) {
+			padding-bottom: calc(var(--sTPB) * 1.35);
+		}
+	}
+
+	&__row {
+		@include roww(24px);
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(63);
+		}
+	}
+
+	h1 {
+		letter-spacing: rem(0.3);
+	}
+
+	&__imgCol {
+		max-width: 208px;
+		align-self: stretch;
+	}
+
+	&__imgWrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			@include a-cent;
+			width: 143px;
+			height: 143px;
+			background-color: var(--row-bg);
+			transform: rotate(var(--rotate));
+			opacity: .1;
+		}
+
+		img {
+			max-width: 144px;
+			max-height: 144px;
+			position: absolute;
+			@include a-cent1;
+			margin-left: 10px;
+		}
+	}
+
+	&__title {
+		@extend .h2;
+		margin-bottom: rem(17);
+	}
+
+
+	&__colorBlock {
+		position: relative;
+		z-index: 2;
+		padding: rem(24) rem(20) rem(12) rem(24);
+		@include media-breakpoint-up(xxxl) {
+			padding: rem(24) rem(110) rem(12) rem(24);
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(15);
+		}
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--row-bg);
+			opacity: .1;
+			border-radius: 8px;
+		}
+
+		p {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+			position: relative;
+			line-height: 150%;
+			@extend .mono2;
+			padding-left: rem(12);
+			margin-bottom: rem(10);
+			margin-right: rem(7);
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				@include a-cent(y);
+				width: 4px;
+				height: 4px;
+				background: var(--row-bg);
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&__colorCol {
+		@include media-breakpoint-up(xxl) {
+			max-width: 648px;
+		}
+	}
+
+	&__textWrap {
+		padding-top: 5px;
+		@include media-breakpoint-up(xxl) {
+			margin-right: -15px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(15);
+		}
+
+		p {
+			@extend .mono2;
+			line-height: 155%;
+		}
+	}
+
+	&__priceCol {
+		@include media-breakpoint-up(md) {
+			max-width: 325px;
+		}
+	}
+	
+	&__priceBlock {
+		background: #F8F8F9;
+		border-radius: 8px;
+		padding: rem(24) rem(24) rem(29);
+	}
+	
+	&__cost {
+		font-weight: 500;
+		margin-bottom: rem(19);
+	}
+
+	&__sm {
+		margin-right: rem(7px);
+	}
+
+	&__priceWrap {
+		display: flex;
+		align-items: flex-end;
+		@extend .mono2;
+	}
+
+	&__price {
+		font-size: rem(48);
+		font-weight: bold;
+		white-space: nowrap;
+		line-height: 1;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sServices

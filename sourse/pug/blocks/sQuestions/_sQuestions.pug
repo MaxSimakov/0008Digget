@@ -1,0 +1,89 @@
+mixin sQuestions(data)
+	// start sQuestions
+	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Нас часто спрашивают
+				
+			.row.justify-content-between
+				+e.lCol.col-lg-6
+					+questionItem(`Как быстро разрабатывается сайт?`,`В&nbsp;среднем, это 14-20 рабочих дней для лендинга или односраничных сайтов, 5-7 недель для корпоративных сайтов. Время на&nbsp;разработку интернет-магазинов рассчитывается индивидуально.`,'active')(class="active")
+					+questionItem(`А&nbsp;у&nbsp;нас будет больше заказов от&nbsp;рекламы?`,`Мы&nbsp;гарантируем, что мы&nbsp;увеличим приток клиентов, которые интересуются вашей продукцией. Но&nbsp;обещать увеличение продаж&nbsp;&mdash; мы&nbsp;не&nbsp;можем, если вы&nbsp;не&nbsp;предоставляете нам доступ ко&nbsp;всем процессам, участвующим в&nbsp;воронке продаж.`)
+					+questionItem(`Как оценить результат сотрудничества?`,`У&nbsp;каждого проекта свои ключевые показатели эффективности (KPI), которые обговариваются индивидуально с&nbsp;заказчиком.`)
+					+questionItem(`А&nbsp;реклама в&nbsp;интернете вообще работает?`,`Разумеется, иначе мы&nbsp;бы сейчас не&nbsp;пользовались такими сервисами, как Яндекс или Google. Ваши конкуренты уже давно смекнули, что это работает. Если нет&nbsp;&mdash; то&nbsp;у&nbsp;вас есть шанс обогнать их&nbsp;по&nbsp;всем показателям. Так чего&nbsp;же вы&nbsp;ждете?`)
+				+e.rCol.col-lg-6
+					+b.questionsFlyItems.fly-items-js
+						+e.question--1(data-depth="0.1")
+							+icon('question')
+						+e.question--2(data-depth="0.15")
+							+icon('question')
+						+e.question--3(data-depth="0.25")
+							+icon('question')
+						+e.question--4(data-depth="0.3")
+							+icon('question')
+						+e.blue--sm(data-depth="0.1")
+							+icon('square')
+						+e.blue--md(data-depth="0.15")
+							+icon('square')
+						+e.blue--lg(data-depth="0.25")
+							+icon('square')
+						+e.green--sm(data-depth="0.3")
+							+icon('square')
+						+e.green--md(data-depth="0.35")
+							+icon('square')
+						+e.orange--sm(data-depth="0.1")
+							+icon('square')
+						+e.orange--lg(data-depth="0.15")
+							+icon('square')
+					+e.question.text-center
+						+e.imgBlock 
+							+pic('question.png','','')(class="sQuestions__mainImg")
+							+pic('questionShadow.png')(class="sQuestions__imgShadow")
+						.h2 Хотите задать другой вопрос?
+						p Мы&nbsp;готовы ответить на&nbsp;него прямо сейчас.
+						+e.btn(href="#") задать вопрос
+	// end sQuestions
+
+mixin questionItem(headerTxt,t,active)
+	+e.item&attributes(attributes)
+		+e.header--js!= headerTxt 
+			+e.iconWrap
+				+icon('chevron-right-white')
+		if active
+			if block
+				+e.content--js(style="display: block")
+					block
+			else
+				+e.content--js(style="display: block")!= t
+		else
+			if block
+				+e.content--js
+					block
+			else
+				+e.content--js!= t
+				
+
+
+mixin sQuestions-vacancies(data)
+	// start sQuestions
+	+b.SECTION.sQuestions--vacancies.section#sQuestions&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Актуальные вакансии
+				
+			.row.justify-content-between
+				+e.lCol.col-lg
+					+questionItem(`SEO специалист`,'','active')
+						h6 Что нужно делать?
+						p Основные задачи: верстка адаптивных макетов сайтов и&nbsp;лендинг-страниц, работа с&nbsp;wiki-разметкой Вконтакте.
+						br
+						h6 Обязанности:
+						p Верстка на HTML5/CSS3;<br>Front-End разработка с использованием Javascript, JQuery.
+						br
+						h6 Требования:
+						p Знания и&nbsp;опыт работы с&nbsp;HTML5, CSS3, Javascript, jQuery, bootstrap;<br>Знания адаптивной верстки;<br>Умение точно оценивать время требуемое на&nbsp;выполнение задачи;
+						br
+						h6 Условия:
+						p Возможность профессионального и&nbsp;карьерного роста;<br>График 5/2, 10:00&nbsp;&mdash; 18:00;<br>Офис рядом с&nbsp;центральной площадью, хорошая транспортная развязка;<br>Испытательный срок: 1-2&nbsp;мес.
+
+

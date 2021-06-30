@@ -1,0 +1,59 @@
+mixin sHowWeWork(data)
+	// start sHowWeWork
+	+b.SECTION.sHowWeWork.section#sHowWeWork&attributes(attributes)
+		.container
+			+e.iconWrap.d-none.d-md-block
+				+icon('pattern')
+			+b.howWeWorkSquares.fly-items-js
+				+e.green--1(data-depth="0.1")
+					+icon('square')
+				+e.green--2(data-depth="0.3")
+					+icon('square')
+				+e.green--3(data-depth="0.2")
+					+icon('square')
+				+e.green--4(data-depth="0.1")
+					+icon('square')
+				+e.orange--1(data-depth="0.4")
+					+icon('square')
+				+e.orange--2(data-depth="0.5")
+					+icon('square')
+				+e.orange--3(data-depth="0.3")
+					+icon('square')
+				+e.orange--4(data-depth="0.2")
+					+icon('square')
+				+e.orange--5(data-depth="0.4")
+					+icon('square')
+				+e.blue--1(data-depth="0.1")
+					+icon('square')
+				+e.blue--2(data-depth="0.15")
+					+icon('square')
+				+e.blue--3(data-depth="0.25")
+					+icon('square')
+			+b.section-title
+				h2 Как мы работаем
+				p Наша главная цель&nbsp;&mdash; решать реальные проблемы бизнеса, помогать ему развиваться и&nbsp;приводить клиентов.
+				
+			.row.align-items-end
+				+e.col.col-md-6.col-lg-3.col-xxl-4
+					+e.item(style="background: #FFF6EC;")
+						+pic('rocket.png')(class="sHowWeWork__rocket d-none d-xxl-block")
+						+pic('planet.png')(class="sHowWeWork__planet")
+						h6 Важные цели -<br> эффективные решения
+						p Мы&nbsp;создаем digital-продукты, ориентируясь на&nbsp;интересы и&nbsp;потребности бизнеса, его аудитории. Развитие и&nbsp;анализ эффективности
+				+e.col.col-md-6.col-lg-3.col-xxl-4 
+					+e.item(style="background: #F2F6FF;")
+						h6 Аналитика и&nbsp;комплексный подход
+						p Мы&nbsp;предлагаем оптимальные решения. <br>От&nbsp;анализа до&nbsp;разработки решений любого уровня сложности.
+					+e.item(style="background: #F0F0F1;")
+						h6 timeline и&nbsp;action-план
+						p Разрабатываем практические и&nbsp;выполнимые рекомендации по&nbsp;продвижению Вашего бизнеса.
+				+e.col.col.d-none.d-xl-block
+					+e.item(style="background: #FFF6EC;")
+						+pic('chart.png')(class="sHowWeWork__chart")
+						+pic('chartBg.png')(class="sHowWeWork__chartBg")
+				+e.col.col-lg
+					+e.item(style="background: #F2FFF3;")
+						+pic('chart_2.png')(class="sHowWeWork__chartCard")
+						h6 Полная картина развития Вашего бизнеса в&nbsp;digital
+						p Изучаем все проблемы и&nbsp;недочеты вашего продвижения и&nbsp;позиционирования в&nbsp;интернете, разберемся, как можно масштабировать Ваш бизнес.
+	// end sHowWeWork

@@ -1,0 +1,33 @@
+mixin sOurTeam(data)
+	// start sOurTeam
+	+b.SECTION.sOurTeam.section#sOurTeam&attributes(attributes)
+		+pic('ourTeam-bg.jpg','bg')(class="picture-bg")
+		.container
+			+b.section-title
+				h2 В нашей команде работают
+				
+			+e.sliderWrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i,title,t,imgBg)
+							+e.slide.swiper-slide
+								.row 
+									+e.imgCol.col
+										+e.imgWrap 
+											+e.imgBg(style= imgBg)
+											if i
+												//- +pic(`ourTeam-${i}.png`,'','')
+												picture
+													source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/ourTeam-${i}.webp` type="image/webp")
+													img.swiper-lazy(src="#" data-src=`img/@2x/ourTeam-${i}.png`, alt="")
+									+e.col.col
+										+e.title= title
+										p!= t
+						+slide('1','копирайтер','Пишет продающие тексты для Вашего бизнеса.','background: #FFF6EC;')
+						+slide('2','Дизайнер ',`Разрабатывает для UI/UX дизайн и&nbsp;стилистические решения.`,'background: #F2FFF3;')
+						+slide('3','маркетолог','Занимается продвижением нового товара или увеличения продаж.','background: #F2F6FF;')
+						+slide('4','программист','Занимается технической частью Ваших проектов. Любит гладить кота.','background: #F2F6FF;')
+				.swiper-button-hand.swiper-button-hand-next.swiper-button-next.d-none.d-xxl-flex
+					+icon('chevron-right')
+
+	// end sOurTeam

@@ -1,0 +1,65 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+e.logo(href="#")
+				img(src="img/@2x/logo.png", alt="logo")
+			+mnu()
+			+e.btn(href="#") заполнить бриф
+			.text-center
+				+e.tel(href="tel:+7(900)1541314") +7 (900) 154-13-14
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.align-items-center
+				.col-auto
+					+e.logo(href="#")
+						img(src="img/@2x/logo.png", alt="logo")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col.d-lg-none
+					//- +mob-mnu()
+				.col-auto.d-none.d-lg-block
+					+e.btn(href="#") заполнить бриф
+				+e.col.col-auto.d-lg-none
+					+e.documentBtn(href="#")
+						+icon('document')
+					+b.toggle-menu-mobile--js
+						span
+
+mixin top-nav-inner() 
+	// start top-nav
+	+b.top-nav--inner.block-with-lazy
+		.container
+			.row.align-items-center
+				.col-auto
+					+e.logo(href="#")
+						img(src="img/svg/logo.svg", alt="logo")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col.d-lg-none
+
+					+mob-mnu()
+				.col-auto.d-none.d-lg-block 
+					+e.tel(href="tel:+7(900)1541314") +7 (900) 154-13-14
+				.col-auto.d-none.d-lg-block
+					+e.btn(href="#") заполнить бриф
+				+e.col.col-auto.d-lg-none
+					+e.documentBtn(href="#")
+						+icon('document')
+					+b.toggle-menu-mobile--js
+						span
+					
+	// end top-nav

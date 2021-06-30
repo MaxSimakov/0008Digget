@@ -1,0 +1,161 @@
+// start .sQuiz
+.sQuiz {
+	--sPT: ;
+	--sPB: ;
+	--sTPB: ;
+	padding-top: calc(var(--sPT) / 1.1);
+	
+	&__inner {
+		max-width: 948px;
+	}
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) / 1.4);
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include roww(75px);
+			}
+		}
+
+		h1 {
+			margin-bottom: .8rem;
+		}
+
+		p {
+			padding-left: 3px;
+			@extend .mono2;
+			font-weight: 500;
+		}
+	}
+
+	&__block {
+		padding-bottom: rem(15);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(32);
+		}
+
+		&--border {
+			position: relative;
+			padding-top: rem(12px);
+			padding-bottom: rem(25);
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(45);
+			}
+
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 4px;
+				border-radius: 8px;
+				background: #F0F0F1;
+				left: 0;
+			}
+
+			&::before {
+				top: 0;
+				@include media-breakpoint-up(sm) {
+					top: -22px;
+				}
+			}
+
+			&::after {
+				bottom: 20px;
+				@include media-breakpoint-up(sm) {
+					bottom: 30px;
+				}
+			}
+		}
+	}
+
+	h6 {
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(32);
+		}
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		margin-bottom: rem(16);
+		margin-top: rem(16px);
+		padding: .7rem 1.75rem;
+	}
+
+	&__polite {
+		@extend .mono2;
+		font-size: 14px;
+		color: #B8B8B8;
+		line-height: calc(19/14);
+		max-width: 296px;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQuiz
+
+blockquote {
+	padding: rem(15);
+	@include media-breakpoint-up(sm) {
+		padding: rem(24);
+	}
+	background: #FFF6EC;
+	border-radius: 8px;
+	line-height: 150%;
+	font-size: 12px;
+	@extend .mono2;
+}
+
+textarea.form-control {
+	resize: none;
+	height: 146px;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.form-group {
+	padding-bottom: rem(15);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: rem(23);
+	}
+	@extend .mono2;
+}
+
+
+.add-file{
+	// padding-bottom: 25px;
+	label{
+		width: 100%;
+		display: block;
+	}
+	input{
+		display: none;
+	}
+	
+	&__btn{
+		@extend .btn;
+		outline: none !important;
+		border: 1px solid #F0F0F1;
+		border-radius: 8px;
+		height: 60px;
+		width: 100%;
+		display: grid;
+		place-items: center;
+		text-align: center;
+		@extend .mono2;
+
+		&:hover {
+			border-color: #FFBA72;
+		}
+	}
+	&__filename{
+		padding: 10px;
+		display: inline-block;
+	}
+
+	// &__text
+}

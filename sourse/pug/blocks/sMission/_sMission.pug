@@ -1,0 +1,32 @@
+mixin sMission(data)
+	// start sMission
+	+b.SECTION.sMission.section#sMission&attributes(attributes)
+		.container
+			+e.titleRow.row.align-items-center
+				+e.col.col-lg-7.col-xxl-6
+					+b.section-title
+						h1 У&nbsp;Digget есть своя миссия&nbsp;&mdash; и&nbsp;мы&nbsp;её придерживаемся, но&nbsp;не&nbsp;кричим о&nbsp;ней.
+						h4 Цель проста&nbsp;&mdash; решать реальные проблемы бизнеса, помогать ему развиваться и&nbsp;приводить клиентов. <br>Ценности Digget: технологичность, гибкость и&nbsp;прозрачность нашей работы.
+				.col-lg-5.col-xxl-6
+					+e.imgWrap 
+						+pic('digget.png')
+			+e.row.row.justify-content-center
+				mixin item(data)
+					.col-md-6.col-xl-4
+						+e.item 
+							h2= data.title 
+							p!= data.text 
+							
+				+item({
+					title: 'Технологичность',
+					text: `Ускоряем бизнес-процессы, за&nbsp;счет использования разных стратегий продвижения, оптимизируем ресурсы клиента.`
+				})
+				+item({
+					title: 'Гибкость',
+					text: `Находимся внутри и&nbsp;вне трендов, придумываем нестандартные решения и&nbsp;подбираем для каждого клиента тот язык, на&nbsp;котором мы&nbsp;будем понимать друг друга.`
+				})
+				+item({
+					title: 'Прозрачность',
+					text: `Находимся внутри и&nbsp;вне трендов, придумываем нестандартные решения и&nbsp;подбираем для каждого клиента тот язык, на&nbsp;котором мы&nbsp;будем понимать друг друга.`
+				})
+	// end sMission

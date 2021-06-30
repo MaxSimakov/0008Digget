@@ -1,0 +1,25 @@
+mixin sProblem(data)
+	// start sProblem
+	+b.SECTION.sProblem.section#sProblem&attributes(attributes)
+		+pic('problem-bg.jpg','bg')(class="picture-bg")
+		.container
+			.row
+				+e.col.col
+					+b.section-title
+						+e.iconWrap
+							+icon('pattern')
+						h2 Знакомо?
+						h6 Тогда мы&nbsp;знаем, как решить эти, и&nbsp;многие другие вопросы.
+					+e.btn(href="#") заполнить бриф
+				+e.ebanutyiCol.col 
+					+e.img.d-none.d-xxl-block
+						+pic('problemImg.png')
+					ul 
+						li Не довольны конверсией сайта или рекламной кампании.
+						li Целевая аудитория даже не знает про Ваш бизнес.
+						li Запустили рекламу - заказов ноль.
+						li Бизнес есть в соцсетях, но оттуда нет клиентов.
+						li Сайт есть, но заказы с него не идут.
+						li Не нравится, как работает сайт.
+			
+	// end sProblem

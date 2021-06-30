@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+
+include ../blocks/sServices/_sServices.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'digget'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	+header(class="bg-white")
+		+top-nav-inner()
+	+sServices
+	+footer()
+
+
+	

@@ -1,0 +1,106 @@
+mixin sServices(data)
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container
+			nav(aria-label="breadcrumb")
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+					li.breadcrumb-item(itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" style="--brBG: #FFBA72")
+						a(href='#' itemprop="item")
+							span(itemprop="name") Создание сайта
+							meta(itemprop="position" content="1")
+					li.breadcrumb-item(itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" style="--brBG: #4FB058")
+						a(href='#' itemprop="item")
+							span( itemprop="name") Дизайн и Контент
+							meta(itemprop="position" content="2")
+					li.breadcrumb-item(itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" style="--brBG: #3273FA")
+						a(href='#' itemprop="item")
+							span( itemprop="name") Продвижение
+							meta(itemprop="position" content="3")
+					li.breadcrumb-item(itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" style="--brBG: #B04FAC")
+						a(href='#' itemprop="item")
+							span( itemprop="name") Поддержка
+							meta(itemprop="position" content="4")
+
+			+b.section-title
+				h1 Все услуги студии
+				
+			mixin row(data)
+				+e.row.row(style= data.bg)
+					+e.imgCol.col.d-none.d-xl-block
+						+e.imgWrap(style= data.rotate)
+							+pic(`services-${data.img}.png`)
+					.col-lg
+						+e.textWrap
+							+e.title= data.title 
+							p!= data.text 
+					+e.colorCol.col-lg-4.col-xxl-5
+						+e.colorBlock 
+							p Что делаем
+							ul
+								block 
+					+e.priceCol.col-lg
+						+e.priceBlock 
+							+e.cost Стоимость
+							+e.priceWrap 
+								+e.sm от
+								+e.price= data.price
+
+			+row({
+				bg: '--row-bg: #FFBA72',
+				rotate: '--rotate: -13deg',
+				img: '1',
+				title: 'Создание сайта',
+				text: `Эксклюзивный продающий дизайн и&nbsp;профессиональная разработка сайта. Готовые решения, классические и&nbsp;продвинутые проекты под ключ.`,
+				price: '60 000 ₽'
+			})
+				li Проектирование
+				li Дизайн сайтов
+				li Разработка сайтов
+				li Веб&#8209;программирование
+				li Поддержка сайтов
+			+row({
+				bg: '--row-bg: #4FB058',
+				rotate: '--rotate: -88.17deg',
+				img: '2',
+				title: 'Дизайн и Контент',
+				text: `Продакшн и&nbsp;разработка индивидуального дизайна. Съемка и&nbsp;монтаж роликов, проведение фотосессий, отрисовка уникального логотипа, полиграфия, оформление сообществ и&nbsp;аккаунтов в&nbsp;социальных сетях`,
+				price: '5 000 ₽'
+			})
+				li Логотип
+				li Фирменный стиль
+				li Брендинг
+				li Брендбук
+				li Полиграфия
+				li Дизайн в соц. сетях
+				li Фото
+				li Видео
+			+row({
+				bg: '--row-bg: #3273FA',
+				rotate: '--rotate: 25deg',
+				img: '3',
+				title: 'Продвижение',
+				text: `Продвижение сайтов в&nbsp;поисковых системах (SEO), настройка контекстной и&nbsp;таргетированной рекламы, SMM, продвижение бизнеса на&nbsp;интернет-площадках, настройка геосервисов, офлайн продвижение`,
+				price: '20 000 ₽'
+			})
+				li SEO
+				li SMM
+				li Настройка контекстной рекламы
+				li Офлайн реклама
+				li Настройка таргетированной рекламы
+				li Сервисы Яндекс, Google, 2GIS 
+			+row({
+				bg: '--row-bg: #B04FAC',
+				rotate: '--rotate: -10deg',
+				img: '4',
+				title: 'Поддержка',
+				text: `Обслуживание сайтов на&nbsp;любой системе управления (CMS) и&nbsp;даже без неё.`,
+				price: '15 000 ₽'
+			})
+				li Контроль оплаты домена и хостинга
+				li Поддержка работы сайта 24/7
+				li Оптимизация сайта
+				li Наполнение контентом
+
+
+
+	// end sServices

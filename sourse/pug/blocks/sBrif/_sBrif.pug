@@ -1,0 +1,37 @@
+mixin sBrif(data)
+	// start sBrif
+	+b.sBrif.section#sBrif&attributes(attributes)
+		+wave
+		.container
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(title)
+						+e.slide.swiper-slide
+							+e.title= title 
+							block
+							+e.btn(href="#") ЗАПОЛНИТЬ БРИФ
+								+icon('chevron-right')
+					+slide('Создание сайта')
+						ul
+							li Cоздание лендингов
+							li Cоздание корпоративных сайтов
+							li Cоздание интернет&#8209;магазинов
+					+slide('Дизайн и контент')
+						ul
+							li Cоздание брендинга
+							li Дизайн сайтов
+							li Создание видео и фото контента
+					+slide('Продвижение')
+						ul
+							li Контекстная реклама
+							li SMM
+							li SEO
+							li SERM
+					+slide('ПОДДЕРЖКА')
+						ul
+							li Аудит
+							li Контент-поддержка
+							li Техническая-поддержка
+					+slide('Проект под ключ')
+						p К&nbsp;каждому бизнесу, мы&nbsp;подходим индивидуально и&nbsp;предлагаем нестандартные решения, которые подойдут именно Вам.
+	// end sBrif

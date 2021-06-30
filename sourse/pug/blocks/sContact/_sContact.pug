@@ -1,0 +1,45 @@
+mixin sContact()
+	// start sContact
+	+b.SECTION.sContact.section#sContact&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Контакты в Белгороде
+				
+			.row
+				+e.col.col-lg-5 
+					+e.lightBlock
+						+e.tel(href="tel:+7(900)1541314") +7 (900) 154-13-14
+				.col-lg-7.align-self-center
+					+e.location
+						h4 Наш офис находится в&nbsp;Белгороде,<br> но&nbsp;мы&nbsp;сделали все возможное для того, чтобы&nbsp;Вы могли работать с&nbsp;нами из&nbsp;любой точки России.
+				+e.col.col-lg-5 
+					+e.lightBlock
+						+e.block
+							h4 Адрес
+							h6 г. Белгород, ул. Гражданский проспект 29а
+						+e.block 
+							h4 Электронная почта
+							+e.mail(href="mailto:box@digget.org" target="_blank") box@digget.org
+						+e.block 
+							h4 Часы работы
+							h6 с 10:00 до 18:00<br>с понедельника по пятницу
+				.col-lg 
+					.row 
+						.col-md-6.col-lg-12.col-xl-6 
+							+e.socItem(href="#" target="_blank")
+								+icon('instagram')
+								+e.socTxt Мы в #[span Instagram]
+						.col-md-6.col-lg-12.col-xl-6 
+							+e.socItem(href="#" target="_blank")
+								+icon('vk')
+								+e.socTxt Мы во #[span ВКонтакте]
+						.col-md-6.col-lg-12.col-xl-6 
+							+e.socItem(href="#" target="_blank")
+								+icon('fb')
+								+e.socTxt Мы в #[span Facebook]
+			+e.mapWrap 
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac59a89a07c9013c78b99e901e6223bb4f8e77ed03bd52014cd6a44b9a4b04f3d&amp;width=100%25&amp;height=416&amp;lang=ru_RU&amp;scroll=false"></script>
+
+
+
+	// end sContact

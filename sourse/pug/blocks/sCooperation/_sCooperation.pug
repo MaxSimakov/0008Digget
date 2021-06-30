@@ -1,0 +1,31 @@
+mixin sCooperation(data)
+	// start sCooperation
+	+b.SECTION.sCooperation.section#sCooperation&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Сотрудничество с Digget
+				
+			+e.row.row
+				.col-lg-6 
+					+e.item 
+						.row.align-items-center
+							.col-sm-auto
+								+e.imgWrap 
+									+pic('money.png','','')
+							.col 
+								h6 Заработаем вместе? Получайте&nbsp;10% от&nbsp;каждого заказа клиента, которого привели&nbsp;вы. Напишите нам на&nbsp;почту, чтобы узнать все подробности: box@digget.org
+				.col-lg-6 
+					+e.item 
+						.row.align-items-center
+							.col-sm-auto
+								+e.imgWrap 
+									+pic('handshake.png','','')
+							.col 
+								h6 Нужна помощь в&nbsp;организации мероприятия? Мы&nbsp;с&nbsp;радостью станем инфо-партнерами или участниками вашего события, дадим рекомендации, выделим спикеров или просто пообщаемся.
+				.col
+					+e.item--sm
+						+e.img 
+							+pic('fornex.png','','')
+						p Европейский хостинг с&nbsp;более чем 10&nbsp;летней историей, позволяет нашим клиентам получать услуги высочайшего качества и&nbsp;стабильности.
+						+e.btn(href="#") ПЕРЕЙТИ
+	// end sCooperation

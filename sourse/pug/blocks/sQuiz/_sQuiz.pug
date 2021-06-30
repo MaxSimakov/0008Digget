@@ -1,0 +1,71 @@
+mixin sQuiz(data)
+	// start sQuiz
+	+b.SECTION.sQuiz.section#sQuiz&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title
+					.row 
+						.col-md-auto
+							h1 Заполните бриф
+							p Оставьте заявку, либо свяжитесь с&nbsp;нами.
+						.col-md
+							blockquote #[span.text-primary Бриф] &mdash; это опрос, который предоставляет исходные данные, на&nbsp;основании которых мы&nbsp;можем примерно понять, что нужно конкретно вам. Это можно сравнить с&nbsp;техническим заданием, но&nbsp;в&nbsp;более сжатом виде.
+						
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+					+e.block 
+						h6 Тип продукта
+						.row 
+							.col-sm-6.col-lg-4 
+								+radio('Продвижение сайта ','type')
+							.col-sm-6.col-lg-4 
+								+radio('Создание сайта','type')
+							.col-sm-6.col-lg-4 
+								+radio('SMM','type')
+							.col-sm-6.col-lg-4 
+								+radio('Разработка контента','type')
+							.col-sm-6.col-lg-4 
+								+radio('Брендирование','type')
+							.col-sm-6.col-lg-4 
+								+radio('Другое','type')
+					+e.block 
+						h6 Бюджет
+						.row 
+							.col-sm-6.col-lg-4 
+								+radio('Менее 50 000 ₽ ','budget')
+							.col-sm-6.col-lg-4 
+								+radio('100-150 тыс. ₽','budget')
+							.col-sm-6.col-lg-4 
+								+radio('150-300 тыс. ₽','budget')
+							.col-sm-6.col-lg-4 
+								+radio('500 тыс. - 1млн. ₽','budget')
+							.col-sm-6.col-lg-4 
+								+radio(' Более 1млн. ₽','budget')
+							.col-sm-6.col-lg-4 
+								+radio('Не знаю','budget')
+					+e.block--border 
+						h6 Задача
+						+input('Расскажите про свою задачу','textarea')
+						.row 
+							.col-sm-6.col-lg-4 
+								+add-file
+					+e.block 
+						h6 Ваши контакты
+						.row
+							.col-sm-6.col-lg-4 
+								+input('Ваше имя?','text')
+							.col-sm-6.col-lg-4 
+								+input('E-mail','email')
+							.col-lg-4 
+							.col-sm-6.col-lg-4 
+								+input('Название компании','text')
+							.col-sm-6.col-lg-4 
+								+input('Телефон','tel')
+						+e.btn(type="submit") отправить заявку
+						+polite
+	// end sQuiz

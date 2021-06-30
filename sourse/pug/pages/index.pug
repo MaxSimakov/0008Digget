@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBrif/_sBrif.pug
+include ../blocks/sHowWeWork/_sHowWeWork.pug
+include ../blocks/sOurTeam/_sOurTeam.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sProblem/_sProblem.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'digget'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+		+headerBlock()
+	+sBrif
+	+sHowWeWork
+	+sOurTeam
+	+sQuestions
+	+sProblem(class="d-none d-md-block")
+	+sAdvantages
+	+footer()
+
+
+	

@@ -1,0 +1,19 @@
+mixin item-sos(icon, a='#')
+	+e.itemWrap
+		+e.A.item(href= a target="_blank")
+			if block
+				block
+			else
+				+icon(icon)
+//- social buttons
+mixin soc()
+	+b.soc
+		if block
+			block
+		else
+			+item-sos('vk')
+			+item-sos('instagram')
+			+item-sos('fb')
+			+item-sos('telegram')
+
+//- /social buttons 
