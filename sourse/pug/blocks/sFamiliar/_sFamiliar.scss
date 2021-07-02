@@ -1,0 +1,143 @@
+// start .sFamiliar
+.sFamiliar {
+	padding-top: 0;
+	padding-bottom: 0;
+	--size: #{rem(16)};
+	@include media-breakpoint-up(md) {
+		--size: #{rem(24)};
+	}
+	@include media-breakpoint-up(xl) {
+		--size: #{rem(32)};
+	}
+	.row {
+		--bs-gutter-x: #{rem(16)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(24)};
+		}
+	}
+	.section-title {
+		padding-bottom: calc(var(--size) * 1.5);
+
+		h2 {
+			position: relative;
+			display: inline-block;
+			font-weight: 500;
+			line-height: (47 / 36);
+			color: #2c2f34;
+			margin-bottom: 0;
+			@include rfs(36px);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(36);
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				bottom: -2px;
+				@include media-breakpoint-up(md) {
+					bottom: 2px;
+				}
+				left: -3%;
+				width: 106%;
+				height: 17px;
+				background-color: #ffba72;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: var(--size);
+		height: calc(100% - var(--size));
+		p {
+			font-weight: 500;
+			color: #2c2f34;
+		}
+		&--sm {
+			display: flex;
+			align-items: center;
+			p {
+				margin-bottom: 0;
+				font-size: rem(18);
+			}
+			.sFamiliar__img-wrap {
+				@include block;
+				overflow: hidden;
+				max-width: 77px;
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+				background-color: #c4c4c4;
+				margin-right: calc(var(--size) / 2);
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+				}
+			}
+		}
+		&--lg {
+			display: flex;
+			flex-direction: column;
+
+			p {
+				// display: flex;
+				// align-items: center;
+				flex-grow: 1;
+				margin-bottom: 0;
+				text-align: center;
+				max-width: 240px;
+				margin: 0 auto;
+				font-size: rem(16);
+				@include media-breakpoint-up(xl) {
+					font-size: rem(18);
+				}
+			}
+			.sFamiliar__img-wrap {
+				@include block;
+				overflow: hidden;
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+				background-color: #c4c4c4;
+				margin-bottom: var(--size);
+				margin-left: auto;
+				margin-right: auto;
+				@include media-breakpoint-down(sm) {
+					max-width: 200px;
+				}
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	&__top {
+		padding-bottom: calc(var(--size) * 1.5);
+	}
+	&__bottom {
+		padding-bottom: calc(var(--size));
+		@include media-breakpoint-up(lg) {
+			.sFamiliar__col {
+				width: 20%;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sFamiliar

@@ -1,0 +1,21 @@
+mixin sAdditServise(data)
+	// start sAdditServise
+	+b.SECTION.sAdditServise.section#sAdditServise&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title
+					h2 Дополнительные услуги
+				.row
+					mixin item(i, s, t)
+						.col-md-6.col-lg-4
+							+e.item(href="#")
+								+e.img-wrap
+									img.res-i(src=`img/svg/addit-servise-${i}.svg`, alt="")
+								+e.content
+									+e.subtitle!= s
+									+e.title!= t
+					+item(1, `Услуги`, `Landing page`)
+					+item(1, `Услуги`, `Landing page`)
+					+item(1, `Услуги`, `Landing page`)
+
+	// end sAdditServise

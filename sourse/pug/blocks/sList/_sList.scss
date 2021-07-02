@@ -1,0 +1,103 @@
+// start .sList
+.sList {
+	--sPT: ;
+	--sPB: ;
+	--sTPB: ;
+	font-family: PT Sans;
+	--size: #{rem(16)};
+	@include media-breakpoint-up(md) {
+		--size: #{rem(24)};
+	}
+	ul,
+	ol {
+		list-style: none;
+		font-size: rem(15);
+		line-height: 170%;
+		color: #2c2f34;
+		padding: 0;
+		margin-bottom: calc(var(--size) * 1.3);
+		li {
+			position: relative;
+		}
+	}
+	&.with-bg {
+		ol,
+		ul {
+			padding: var(--size);
+			border-radius: 8px;
+		}
+	}
+	&.success {
+		ul {
+			background-color: #f2fff3;
+			li {
+				&::before {
+					background-color: #4fb058;
+				}
+			}
+		}
+	}
+	&.danger {
+		ul {
+			background-color: #fff5f2;
+			li {
+				&::before {
+					background-color: #ed5945;
+				}
+			}
+		}
+	}
+	
+
+	ul {
+		li {
+			padding-left: rem(18);
+			&::before {
+				content: "";
+				@include a-cent(y);
+				width: 6px;
+				height: 6px;
+				left: 0;
+				border-radius: 50%;
+				background-color: $secondary;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: num;
+		li {
+			padding-left: rem(31);
+			&::before {
+				content: counter(num);
+				counter-increment: num;
+				@include a-cent(y);
+				left: calc(17px / 2);
+				transform: translateX(-50%);
+				height: 17px;
+				font-size: 10px;
+				line-height: 170%;
+				color: $white;
+				z-index: 10;
+			}
+			&::after {
+				content: "";
+				@include a-cent(y);
+				left: 0;
+				width: 17px;
+				height: 17px;
+				border-radius: 50%;
+				background-color: $secondary;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sList

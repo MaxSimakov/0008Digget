@@ -271,7 +271,7 @@ function eventHandler() {
 				document.querySelector('.top-nav  ').classList.remove('fixed');
 			}
 		}
-		
+
 	}
 
 	window.addEventListener('resize', () => {
@@ -315,7 +315,7 @@ function eventHandler() {
 				slidesPerView: 3,
 				spaceBetween: 71,
 			},
-			576 : {
+			576: {
 				slidesPerView: 'auto',
 				spaceBetween: 40,
 			},
@@ -350,46 +350,68 @@ function eventHandler() {
 			loadPrevNextAmount: 8,
 		},
 	});
+	// let addServSlider = new Swiper('.sAdditServise__slider--js', {
+
+	// 	watchOverflow: true,
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 24,
+
+	// 	breakpoints: {
+	// 		576: {
+	// 			freeMode: true,
+	// 			freeModeMomentum: true,
+	// 		},
+	// 		1200: {
+	// 			spaceBetween: 32,
+	// 		},
+	// 	},
+
+	// 	//lazy
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 		loadPrevNextAmount: 8,
+	// 	},
+	// });
 	// modal window
 
 
 
-	function makeDDGroup(qSelecorts){
-    for (let parentSelect of qSelecorts){
-      let parent = document.querySelector(parentSelect);
-      if (parent){
-        // childHeads, kind of funny))
-        let ChildHeads = parent.querySelectorAll('.sQuestions__header--js');
-        $(ChildHeads).click(function (){
-          let clickedHead = this;
-          $(ChildHeads).each(function (){
-            if (this === clickedHead){
-              $(this.parentElement).toggleClass('active');
-              $(this.parentElement).find('.sQuestions__content--js').slideToggle(function (){
-                $(this).toggleClass('active');
-              });
-            }
-            else{
-              $(this.parentElement).removeClass('active');
-              $(this.parentElement).find('.sQuestions__content--js').slideUp(function (){
-                $(this).removeClass('active');
-              });
-            }
-          });
-        });
-      }
-    }
-  }
-  makeDDGroup(['.sQuestions', '.dd-price-js']);
+	function makeDDGroup(qSelecorts) {
+		for (let parentSelect of qSelecorts) {
+			let parent = document.querySelector(parentSelect);
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.sQuestions__header--js');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.sQuestions__content--js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						}
+						else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.sQuestions__content--js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			}
+		}
+	}
+	makeDDGroup(['.sQuestions', '.dd-price-js']);
 
 
-	$('.drop-accardion-js').on('click', function(){
+	$('.drop-accardion-js').on('click', function () {
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	})
 
 	let flyItems = document.querySelectorAll('.fly-items-js');
-	for(let item of flyItems){
+	for (let item of flyItems) {
 		var parallaxInstance = new Parallax(item);
 	}
 

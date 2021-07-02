@@ -1,0 +1,13 @@
+mixin sList(ol, ...items)
+	// start sList
+	+b.sList#sList&attributes(attributes)
+		if ol
+			ol
+				each item in items
+					li!= item
+				
+		else
+			ul
+				each item in items
+					li!= item
+	// end sList

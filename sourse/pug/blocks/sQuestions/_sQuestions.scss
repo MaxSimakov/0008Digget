@@ -7,6 +7,16 @@
 		--sPB: #{rem(100)};
 	}
 
+	&--landing {
+
+		--sPT: #{rem(0)};
+		--sPB: calc(#{rem(66)} / 2);
+		@include media-breakpoint-up(md) {
+		--sPT: #{rem(0)};
+		--sPB: #{rem(66)};
+		}
+	}
+
 	.section-title {
 		padding-bottom: calc(var(--sTPB) * 1.05);
 	}

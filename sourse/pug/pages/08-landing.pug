@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBrif/_sBrif.pug
+include ../blocks/sHowWeWork/_sHowWeWork.pug
+include ../blocks/sOurTeam/_sOurTeam.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sProblem/_sProblem.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sAdditServise/_sAdditServise.pug
+include ../blocks/sExpertise/_sExpertise.pug
+include ../blocks/sList/_sList.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sFamiliar/_sFamiliar.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'digget'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	//- 	+headerBlock()
+	//- +sBrif
+	//- +sHowWeWork
+	//- //- +sOurTeam
+	+sFamiliar
+	+sAdvantages
+	.container
+		.row
+			.col-md-6
+				+sList(``, `Список`, `Список`, `Список`, `Список`)
+			.col-md-6
+				+sList(`ol`, `Список`, `Список`, `Список`, `Список`)
+	.container
+		+sInfo
+	.container
+		.row
+			.col-md-6
+				+sList(``, `Список`, `Список`, `Список`, `Список`).with-bg.success
+			.col-md-6
+				+sList(``, `Список`, `Список`, `Список`, `Список`).with-bg.danger
+
+	+sExpertise
+	+sQuestions-landing
+	+sAdditServise
+	//- +sProblem(class="d-none d-md-block")
+	+footer()
+
+
+	

@@ -1,0 +1,36 @@
+mixin sFamiliar(data)
+	// start sFamiliar
+	+b.SECTION.sFamiliar.section#sFamiliar&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Знакомо?
+			+e.top
+				.row
+					mixin item-sm(i, p)
+						+e.col.col-sm-6.col-xl-4
+							+e.item--sm
+								+e.img-wrap.bg-wrap
+									img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
+								p!= p
+					+item-sm(1, `Много обращений, но мало продаж?`)
+					+item-sm(2, `Не выделяетесь среди множества других сайтов?`)
+					+item-sm(3, `Сайт не приносит деньги?`)
+					+item-sm(4, `У конкурентов сайт круче, чем ваш?`)
+					+item-sm(1, `Сайт не отражает ваши преимущества?`)
+					+item-sm(2, `Не знаете, как продвигать свой бизнес?`)
+
+			+e.bottom
+				.row
+					mixin item-lg(i, p)
+						+e.col.col-6.col-sm-4.col-md-3.col-lg-auto
+							+e.item--lg
+								+e.img-wrap.bg-wrap
+									img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
+								p!= p
+					+item-lg(1, `Много обращений, но мало продаж?`)
+					+item-lg(2, `Не выделяетесь среди множества других сайтов?`)
+					+item-lg(3, `Сайт не приносит деньги?`)
+					+item-lg(4, `У конкурентов сайт круче, чем ваш?`)
+					+item-lg(1, `Сайт не отражает ваши преимущества?`)
+
+	// end sFamiliar

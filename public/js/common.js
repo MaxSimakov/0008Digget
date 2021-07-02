@@ -349,7 +349,26 @@ function eventHandler() {
 			loadPrevNext: true,
 			loadPrevNextAmount: 8
 		}
-	}); // modal window
+	}); // let addServSlider = new Swiper('.sAdditServise__slider--js', {
+	// 	watchOverflow: true,
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 24,
+	// 	breakpoints: {
+	// 		576: {
+	// 			freeMode: true,
+	// 			freeModeMomentum: true,
+	// 		},
+	// 		1200: {
+	// 			spaceBetween: 32,
+	// 		},
+	// 	},
+	// 	//lazy
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 		loadPrevNextAmount: 8,
+	// 	},
+	// });
+	// modal window
 
 	function makeDDGroup(qSelecorts) {
 		var _iterator = _createForOfIteratorHelper(qSelecorts),

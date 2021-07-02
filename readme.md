@@ -5,3 +5,4 @@
 1. <https://maxsimakov.github.io/0008Digget/public/05-mission.html>
 1. <https://maxsimakov.github.io/0008Digget/public/06-contacts.html>
 1. <https://maxsimakov.github.io/0008Digget/public/07-cooperation.html>
+1. <https://maxsimakov.github.io/0008Digget/public/08-landing.html>

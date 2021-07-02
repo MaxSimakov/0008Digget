@@ -44,6 +44,22 @@ mixin sQuestions(data)
 						+e.btn(href="#") задать вопрос
 	// end sQuestions
 
+mixin sQuestions-landing(data)
+	// start sQuestions2
+	+b.SECTION.sQuestions--landing.section#sQuestions&attributes(attributes)
+		.container
+			//- +b.section-title
+			//- 	h2 Нас часто спрашивают
+				
+			.row.justify-content-between
+				+e.lCol.col-lg-6
+					+questionItem(`Как быстро разрабатывается сайт?`,`В&nbsp;среднем, это 14-20 рабочих дней для лендинга или односраничных сайтов, 5-7 недель для корпоративных сайтов. Время на&nbsp;разработку интернет-магазинов рассчитывается индивидуально.`,'active')(class="active")
+					+questionItem(`А&nbsp;у&nbsp;нас будет больше заказов от&nbsp;рекламы?`,`Мы&nbsp;гарантируем, что мы&nbsp;увеличим приток клиентов, которые интересуются вашей продукцией. Но&nbsp;обещать увеличение продаж&nbsp;&mdash; мы&nbsp;не&nbsp;можем, если вы&nbsp;не&nbsp;предоставляете нам доступ ко&nbsp;всем процессам, участвующим в&nbsp;воронке продаж.`)
+					+questionItem(`Как оценить результат сотрудничества?`,`У&nbsp;каждого проекта свои ключевые показатели эффективности (KPI), которые обговариваются индивидуально с&nbsp;заказчиком.`)
+					+questionItem(`А&nbsp;реклама в&nbsp;интернете вообще работает?`,`Разумеется, иначе мы&nbsp;бы сейчас не&nbsp;пользовались такими сервисами, как Яндекс или Google. Ваши конкуренты уже давно смекнули, что это работает. Если нет&nbsp;&mdash; то&nbsp;у&nbsp;вас есть шанс обогнать их&nbsp;по&nbsp;всем показателям. Так чего&nbsp;же вы&nbsp;ждете?`)
+
+	// end sQuestions2
+
 mixin questionItem(headerTxt,t,active)
 	+e.item&attributes(attributes)
 		+e.header--js!= headerTxt 
