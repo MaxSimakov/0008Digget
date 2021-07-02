@@ -349,6 +349,13 @@ function eventHandler() {
 			loadPrevNext: true,
 			loadPrevNextAmount: 8
 		}
+	});
+	var sFamiliarSlider1 = new Swiper('.sFamiliar__bottom-slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
 	}); // let addServSlider = new Swiper('.sAdditServise__slider--js', {
 	// 	watchOverflow: true,
 	// 	slidesPerView: 'auto',

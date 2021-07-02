@@ -122,15 +122,33 @@
 
 	&__top {
 		padding-bottom: calc(var(--size) * 1.5);
+		
 	}
-	&__bottom {
+	&__bottom-slider {
 		padding-bottom: calc(var(--size));
-		@include media-breakpoint-up(lg) {
-			.sFamiliar__col {
-				width: 20%;
+		@include media-breakpoint-down(lg) {
+			.row {
+				min-width: 967.44px;
 			}
 		}
+		.sFamiliar__col {
+			width: 20%;
+		}
+		.swiper-wrapper {
+			@include media-breakpoint-up(lg) {
+				display: block;
+				transform: none;
+			}
+			.swiper-slide {
+				@include media-breakpoint-up(lg) {
+					width: auto;
+					height: auto;
+				}
+			}
+			
+		}
 	}
+
 
 	@include media-breakpoint-up(sm) {
 	}
