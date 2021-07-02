@@ -31,3 +31,38 @@ mixin headerBlock()
 
 
 	// end headerBlock
+
+mixin headerBlock-landing()
+	// start headerBlock-landing
+	+b.headerBlock--landing.section#headerBlock&attributes(attributes)
+		.container
+			.row
+				.col-auto
+					+b.section-title
+						+e.iconWrap
+							+icon('pattern')
+						+e.imgWrap
+							img(src="img/svg/headerBlock-circle.svg", alt="")
+						h1 Создание одностраничного сайта #[span Landing Page] под ключ
+						+e.subtitle Создадим, запустим, настроим рекламу на ваш одностраничный сайт Landing Page, под ключ
+					+e.btn(href="#") заполнить лендинг
+				.col.d-none.d-lg-block
+					+e.shedule
+						+pic('darts.png','','')
+						//- img.res-i(src="img/svg/schedule.svg", alt="")
+			//- +b.headerSquares.fly-items-js
+			//- 	+e.orange--lg(data-depth="0.2")
+			//- 		+icon('square')
+			//- 	+e.orange--sm(data-depth="0.5").d-none.d-md-block
+			//- 		+icon('square')
+			//- 	+e.green--sm(data-depth="0.1").d-none.d-md-block
+			//- 		+icon('square')
+			//- 	+e.green--lg(data-depth="0.3").d-none.d-md-block
+			//- 		+icon('square')
+			//- 	+e.blue--sm(data-depth="0.4")
+			//- 		+icon('square')
+			//- 	+e.blue--lg(data-depth="0.6").d-none.d-md-block
+			//- 		+icon('square')
+
+
+	// end headerBlock-landing
