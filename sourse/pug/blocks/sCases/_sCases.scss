@@ -1,0 +1,152 @@
+// start .sCases
+.sCases {
+	--sPT: ;
+	--sPB: ;
+	--sTPB: ;
+	--size: #{rem(24)};
+	@include media-breakpoint-up(lg) {
+		--size: #{rem(32)};
+	}
+	.tabs__content {
+		.row {
+			--bs-gutter-y: calc(var(--size) / 2);
+			--bs-gutter-x: calc(var(--size) / 2);
+		}
+	}
+
+	.section-title {
+		padding-bottom: var(--size);
+		h1 {
+			font-weight: bold;
+			margin-bottom: calc(var(--size) / 2);
+			@include rfs(48);
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(48);
+			}
+			line-height: (63 / 48);
+		}
+		p {
+			font-family: PT Sans;
+			font-weight: normal;
+			font-size: rem(15);
+			line-height: (19 / 15);
+			color: #000000;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.tabs__btn-accordion {
+		width: 100%;
+		span {
+			font-size: rem(16);
+		}
+	}
+
+	.tabs__caption {
+		margin-bottom: var(--size);
+		display: flex;
+		flex-direction: column;
+		@media (min-width: 420px) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: auto;
+		}
+	}
+	.tabs__content {
+		margin-top: calc(var(--size) / 2);
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+		}
+	}
+
+	.tabs__btn {
+		@include mt;
+		font-family: PT Sans;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 15px;
+		line-height: (19 / 15);
+		border-radius: 8px;
+		padding: calc(var(--size) / 4) calc(var(--size) / 2);
+		&:not(:last-child) {
+			@include media-breakpoint-up(sm) {
+				margin-right: calc(var(--size) / 2);
+			}
+		}
+		&.active {
+			background-color: #fff6ec;
+		}
+		span {
+			white-space: nowrap;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 400px;
+		margin: 0 auto;
+		text-decoration: none;
+		height: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: 100%;
+		}
+		&:hover {
+			h6 {
+				color: $primary;
+			}
+		}
+	}
+
+	&__text {
+		padding: calc(var(--size) / 2);
+	}
+
+	&__img-wrap {
+		@include block(398 / 256);
+		border-radius: 8px;
+		overflow: hidden;
+		img {
+			object-position: center;
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		font-family: PT Sans;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: (16 / 12);
+		color: #656f77;
+		margin-bottom: calc(var(--size) / 4);
+		@include media-breakpoint-up(xxl) {
+			font-size: 15px;
+		}
+	}
+
+	h6 {
+		@include mt;
+		font-weight: bold;
+		line-height: 132.2%;
+		color: #2c2f34;
+		@include rfs(17px);
+		@include media-breakpoint-up(lg) {
+			@include rfs(18px);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: 23px;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCases
