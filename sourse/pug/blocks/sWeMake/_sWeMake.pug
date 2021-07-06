@@ -1,0 +1,15 @@
+mixin sWeMake(data)
+	// start sWeMake
+	+b.SECTION.sWeMake.section#sWeMake&attributes(attributes)
+		+e.slider--js.container
+			.row.swiper-wrapper
+				mixin item(i, p)
+					+e.col.col-auto.swiper-slide
+						+e.item
+							img(src=`img/svg/wemake-${i}.svg`, alt="")
+							p!= p
+				+item(1, `Выделим <span> преимущества </span> вашей услуги или товара`)
+				+item(2, `Сделаем <span> дизайн </span> запоминающимся и вызывающим доверие.`)
+				+item(3, `Применим маркетинговые элементы, которые <span> увеличат конверсию</span>.`)
+		+wave
+	// end sWeMake

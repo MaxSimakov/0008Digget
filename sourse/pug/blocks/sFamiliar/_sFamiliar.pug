@@ -7,7 +7,7 @@ mixin sFamiliar(data)
 			+e.top
 				.row
 					mixin item-sm(i, p)
-						+e.col.col-sm-6.col-xl-4
+						+e.col.col-sm-6.col-lg-4.col-xl-auto
 							+e.item--sm
 								+e.img-wrap.bg-wrap
 									img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
@@ -19,20 +19,19 @@ mixin sFamiliar(data)
 					+item-sm(1, `Сайт не отражает ваши преимущества?`)
 					+item-sm(2, `Не знаете, как продвигать свой бизнес?`)
 
-			+e.bottom-slider--js
-				.swiper-wrapper
-					.row.swiper-slide
-						mixin item-lg(i, p)
-							+e.col.col-auto
-								+e.item--lg
-									+e.img-wrap.bg-wrap
-										img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
-									p!= p
-						+item-lg(1, `Много обращений, но мало продаж?`)
-						+item-lg(2, `Не выделяетесь среди множества других сайтов?`)
-						+item-lg(3, `Сайт не приносит деньги?`)
-						+item-lg(4, `У конкурентов сайт круче, чем ваш?`)
-						+item-lg(1, `Сайт не отражает ваши преимущества?`)
+			+e.bottom-slider--js.container
+				.row.swiper-wrapper
+					mixin item-lg(i, p)
+						+e.col.col-auto.swiper-slide
+							+e.item--lg
+								+e.img-wrap.bg-wrap
+									img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
+								p!= p
+					+item-lg(1, `У конкурентов сайт круче, чем ваш?`)
+					+item-lg(2, `У конкурентов сайт круче, чем ваш?`)
+					+item-lg(3, `У конкурентов сайт круче, чем ваш?`)
+					+item-lg(4, `У конкурентов сайт круче, чем ваш?`)
+					+item-lg(1, `У конкурентов сайт круче, чем ваш?`)
 
 	// end sFamiliar
 //- mixin sFamiliar(data)

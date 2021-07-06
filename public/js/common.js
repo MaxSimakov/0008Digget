@@ -269,7 +269,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '06.jpg';
+	screenName = 'landing.jpg';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -350,32 +350,27 @@ function eventHandler() {
 			loadPrevNextAmount: 8
 		}
 	});
-	var sFamiliarSlider1 = new Swiper('.sFamiliar__bottom-slider--js', {
+	var sFamiliarSlider = new Swiper('.sFamiliar__bottom-slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		freeMode: true
-	}); // let addServSlider = new Swiper('.sAdditServise__slider--js', {
-	// 	watchOverflow: true,
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 24,
-	// 	breakpoints: {
-	// 		576: {
-	// 			freeMode: true,
-	// 			freeModeMomentum: true,
-	// 		},
-	// 		1200: {
-	// 			spaceBetween: 32,
-	// 		},
-	// 	},
-	// 	//lazy
-	// 	lazy: {
-	// 		loadPrevNext: true,
-	// 		loadPrevNextAmount: 8,
-	// 	},
-	// });
-	// modal window
+	});
+	var sWeMakeSlider = new Swiper('.sWeMake__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
+	});
+	var sOpportunitySlider = new Swiper('.sOpportunity__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
+	}); // modal window
 
 	function makeDDGroup(qSelecorts) {
 		var _iterator = _createForOfIteratorHelper(qSelecorts),

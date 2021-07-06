@@ -107,6 +107,15 @@
 		font-weight: 500;
 	}
 
+	&--landing {
+		h2 {
+			@include rfs(36px);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(36);
+			}
+		}
+	}
+
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) { }

@@ -1,0 +1,26 @@
+mixin sOpportunity(data)
+	// start sOpportunity
+	+b.SECTION.sOpportunity.section#sOpportunity&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Лендинг даст возможность:
+		+e.slider--js.container
+			.row.swiper-wrapper
+				mixin item-text(t, p)
+					+e.col.col-auto.swiper-slide
+						+e.item--text
+							h6!= t
+							p!= p
+				+item-text(`Быстро выйти в интернет и онлайн`, `Если нет времени и средств на разработку многостраничного сайта, а клиенты нужны здесь и сейчас.`)
+				+e.col.col-auto.swiper-slide
+					+e.item--img
+						+e.img-wrap
+							img.rocket(src=`img/svg/opportunity-1.svg`, alt="")
+				+item-text(`Развить продукт или услугу`, `У вас есть популярный товар или услуга, и вам хочется расширить клиентскую базу по этому направлению.`)
+				+item-text(`Экономия на создании сайта`, `Если бюджет не позволяет создать многостраничного сайта, то вложитесь в одну страницу, но качественную страницу.`)
+				+e.col.col-auto.swiper-slide
+					+e.item--img
+						+e.img-wrap
+							img.coin(src=`img/svg/opportunity-2.svg`, alt="")
+				+item-text(`Тест идеи`, `При запуске нового товара вы сможете понять, пользуется ли он спросом и стоит ли тратить на него время и бюджет.`)
+	// end sOpportunity

@@ -14,6 +14,9 @@ include ../blocks/sExpertise/_sExpertise.pug
 include ../blocks/sList/_sList.pug
 include ../blocks/sInfo/_sInfo.pug
 include ../blocks/sFamiliar/_sFamiliar.pug
+include ../blocks/sWeMake/_sWeMake.pug
+include ../blocks/sFastWay/_sFastWay.pug
+include ../blocks/sOpportunity/_sOpportunity.pug
 
 block variables
 	- let  mainPage= null
@@ -26,11 +29,13 @@ block pagecontent
 	+header()
 		+top-nav()
 		+headerBlock-landing()
-	//- +sBrif
+	+sWeMake
+	+sFastWay
+	+sOpportunity
 	//- +sHowWeWork
 	//- //- +sOurTeam
 	+sFamiliar
-	+sAdvantages
+	+sAdvantages-landing
 	.container
 		.row
 			.col-md-6
@@ -46,8 +51,8 @@ block pagecontent
 			.col-md-6
 				+sList(``, `Список`, `Список`, `Список`, `Список`).with-bg.danger
 
-	+sExpertise
 	+sQuestions-landing
+	+sExpertise
 	+sAdditServise
 	//- +sProblem(class="d-none d-md-block")
 	+footer()

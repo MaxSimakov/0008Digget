@@ -33,21 +33,23 @@
 				content: "";
 				position: absolute;
 				z-index: -1;
-				bottom: -2px;
-				@include media-breakpoint-up(md) {
-					bottom: 2px;
-				}
+				bottom: 1px;
 				left: -3%;
 				width: 106%;
-				height: 17px;
+				height: 12px;
 				background-color: #ffba72;
+				@include media-breakpoint-up(lg) {
+					bottom: 2px;
+					height: 17px;
+				}
 			}
 		}
 	}
 
 	&__item {
 		margin-bottom: var(--size);
-		height: calc(100% - var(--size));
+		// height: calc(100% - var(--size));
+		height: 100%;
 		p {
 			font-weight: 500;
 			color: #2c2f34;
@@ -81,7 +83,7 @@
 		&--lg {
 			display: flex;
 			flex-direction: column;
-
+			margin-bottom: 0;
 			p {
 				// display: flex;
 				// align-items: center;
@@ -122,33 +124,68 @@
 
 	&__top {
 		padding-bottom: calc(var(--size) * 1.5);
-		
-	}
-	&__bottom-slider {
-		padding-bottom: calc(var(--size));
-		@include media-breakpoint-down(lg) {
-			.row {
-				min-width: 967.44px;
+		.sFamiliar__item--sm {
+			p {
+				@include media-breakpoint-down(sm) {
+					max-width: 370px;
+				}
 			}
 		}
 		.sFamiliar__col {
-			width: 20%;
-		}
-		.swiper-wrapper {
-			@include media-breakpoint-up(lg) {
-				display: block;
-				transform: none;
+			@include media-breakpoint-up(xl) {
+				width: 30%;
 			}
-			.swiper-slide {
-				@include media-breakpoint-up(lg) {
-					width: auto;
-					height: auto;
+			&:nth-child(3n + 2) {
+				@include media-breakpoint-up(xl) {
+					width: 40%;
 				}
 			}
-			
+			&:nth-child(3n + 1) {
+				.sFamiliar__item--sm {
+					p {
+						@include media-breakpoint-up(xl) {
+							max-width: 235px;
+						}
+					}
+				}
+			}
+			&:nth-child(3n + 3) {
+				.sFamiliar__item--sm {
+					p {
+						@include media-breakpoint-up(xl) {
+							max-width: 360px;
+						}
+					}
+				}
+			}
 		}
 	}
-
+	&__bottom-slider {
+		// padding-bottom: calc(var(--size));
+		@include media-breakpoint-down(lg) {
+			.row {
+				// min-width: 967.44px;
+				flex-wrap: nowrap;
+			}
+		}
+		.sFamiliar__col {
+			width: 200px;
+			@include media-breakpoint-up(lg) {
+				width: 20%;
+			}
+		}
+		.swiper-wrapper {
+			width: auto;
+			margin-right: calc(-0.5 * var(--bs-gutter-x));
+			margin-left: calc(-0.5 * var(--bs-gutter-x));
+			@include media-breakpoint-up(lg) {
+				transform: none !important;
+			}
+		}
+		.swiper-slide {
+			height: auto;
+		}
+	}
 
 	@include media-breakpoint-up(sm) {
 	}
