@@ -79,6 +79,11 @@
 		&.active {
 			background-color: #fff6ec;
 		}
+		&:not(.active) {
+			&:hover {
+				background-color: $light;
+			}
+		}
 		span {
 			white-space: nowrap;
 		}
