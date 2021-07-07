@@ -20,123 +20,27 @@ mixin sCases(data)
 				.tabs__wrap
 					.tabs__content.active
 						.row
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page под ключ
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page под ключ
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page под ключ
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page под ключ
+							mixin item(t, h)
+								.col-sm-6.col-md-4
+									+e.item(href="#")
+										+e.img-wrap.bg-wrap
+											img.img-bg(src=`img/@2x/cases.png`, alt="")
+										+e.text
+											+e.subtitle!= t
+											h6!= h
+							- for (let i = 1; i < 5; i++)
+								+item(`Дизайн`, `Создание одностраничного сайта Landing Page под ключ`)
 					.tabs__content
 						.row
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
+							- for (let i = 1; i < 5; i++)
+								+item(`Дизайн`, `Создание одностраничного сайта Landing Page`)
 					.tabs__content
 						.row
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта Landing Page
+							- for (let i = 1; i < 5; i++)
+								+item(`Дизайн`, `Создание одностраничного сайта`)
 					.tabs__content
 						.row
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта
-							.col-sm-6.col-md-4
-								+e.item(href="#")
-									+e.img-wrap.bg-wrap
-										img.img-bg(src=`img/@2x/cases.png`, alt="")
-									+e.text
-										+e.subtitle Дизайн
-										h6 Создание одностраничного сайта
+							- for (let i = 1; i < 5; i++)
+								+item(`Дизайн`, `Создание сайта Landing Page под ключ`)
 
 	// end sCases
