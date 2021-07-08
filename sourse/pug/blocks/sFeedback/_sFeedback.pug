@@ -8,6 +8,9 @@ mixin sFeedback(data)
 				p В&nbsp;данном разделе представлены отзывы клиентов.
 			+e.item
 				.row
+					+e.col.col-lg-4.col-xl-3.col-xxl-auto.order-lg-last
+						+e.img-wrap
+							+pic('cases.png','','')(class="sFeedback__img")
 					.col
 						+e.text
 							p Лендинг (одностраничный сайт) - один из самых быстрых и эффективных способов для генерации лидов (новых обращений). На его создание требуется меньше времени, чем на создание многостраничного корпоративного сайта. Но конверсия лендинга может достигать ещё больших показателей, чем многостраничник.
@@ -21,9 +24,6 @@ mixin sFeedback(data)
 									+e.caption
 										+e.name Антон Резник 
 										+e.position Директор инстаграма
-					+e.col.col-sm-auto
-						+e.img-wrap
-							+pic('cases.png','','')(class="sFeedback__img")
 
 
 
