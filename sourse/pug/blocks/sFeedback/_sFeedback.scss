@@ -55,12 +55,12 @@
 	&__img-wrap {
 		position: relative;
 		width: 223px;
-		height: 248px;
+		height: calc(293px - var(--size) - 17px);
 		overflow: visible;
-		margin-bottom: calc(var(--size) * 2);
-		@include media-breakpoint-up(md) {
 			margin-bottom: var(--size);
-		}
+		// margin-bottom: calc(var(--size) * 2);
+		// @include media-breakpoint-up(md) {
+		// }
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 		}
