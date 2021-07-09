@@ -1,0 +1,20 @@
+mixin sPopularPosts(data)
+	// start sPopularPosts
+	+b.SECTION.sPopularPosts.section#sPopularPosts&attributes(attributes)
+		+e.img-wrap.bg-wrap.d-none.d-xl-block
+			img.img-bg(src=`img/@2x/cases.png`, alt="")
+		+b.section-title
+			h2 Популярные записи
+		.row
+			mixin item(i, s, t)
+				.col-12.col-md-6.col-lg-4.col-xl-12
+					+e.item(href="#")
+						+e.img.bg-wrap
+							img.img-bg(src=`img/svg/addit-servise-${i}.svg`, alt="")
+						+e.content
+							+e.subtitle!= s
+							+e.title!= t
+			+item(1, `Дизайн`, `Создание одностраничного сайта Landing Page`)
+			+item(1, `Дизайн`, `Создание одностраничного сайта Landing Page`)
+			+item(1, `Дизайн`, `Создание одностраничного сайта Landing Page`)
+	// end sPopularPosts

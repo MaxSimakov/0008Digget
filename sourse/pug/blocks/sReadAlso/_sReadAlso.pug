@@ -1,0 +1,19 @@
+mixin sReadAlso(data)
+	// start sReadAlso
+	+b.SECTION.sReadAlso.section#sReadAlso&attributes(attributes)
+		+b.section-title
+			h2 Читайте также
+		+e.slider--js
+			.row.swiper-wrapper
+				mixin item(t, h)
+					+e.col.swiper-slide
+						+e.item(href="#")
+							+e.img-wrap.bg-wrap
+								img.img-bg(src=`img/svg/read-also.svg`, alt="")
+							+e.text
+								+e.subtitle!= t
+								h6!= h
+				- for (let i = 1; i < 5; i++)
+					+item(`Дизайн`, `Создание одностраничного сайта Landing Page под ключ`)
+
+	// end sReadAlso

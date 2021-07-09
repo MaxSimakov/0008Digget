@@ -1,0 +1,114 @@
+// start .sReadAlso
+.sReadAlso {
+	--sPT: 0;
+	--sPB: calc(var(--size) * 3.25);
+	--sTPB: calc(var(--size) / 2);
+
+	--size: #{rem(12)};
+	@include media-breakpoint-up(xl) {
+	--size: #{rem(16)};
+	}
+
+	.row {
+		--bs-gutter-x: var(--size);
+		--bs-gutter-y: var(--size);
+	}
+
+	.section-title {
+		h2 {
+			font-weight: bold;
+			font-size: rem(18);
+			line-height: 132.2%;
+			color: #2c2f34;
+			margin-bottom: 0;
+		}
+	}
+	h6 {
+		@include mt;
+		font-weight: bold;
+		line-height: 132.2%;
+		color: #2c2f34;
+		font-size: rem(18);
+		margin-bottom: 0;
+		@include media-breakpoint-only(lg) {
+			font-size: rem(16);
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		font-family: PT Sans;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: (16 / 12);
+		color: #656f77;
+		margin-bottom: calc(var(--size) / 2);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 400px;
+		margin: 0 auto;
+		text-decoration: none;
+		height: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: 100%;
+		}
+		&:hover {
+			h6 {
+				color: $primary;
+			}
+		}
+	}
+
+	&__img-wrap {
+		@include block(232 / 147);
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #e8eef3;
+		img {
+			object-position: center;
+		}
+	}
+
+	&__text {
+		padding: var(--size) var(--size) calc(var(--size) * 1.5) var(--size);
+	}
+
+	&__slider {
+		// padding-bottom: calc(var(--size));
+		@include media-breakpoint-down(lg) {
+			.row {
+				// min-width: 967.44px;
+				flex-wrap: nowrap;
+			}
+		}
+		.sReadAlso__col {
+			width: 246px;
+			@include media-breakpoint-up(lg) {
+				width: 25%;
+			}
+		}
+		.swiper-wrapper {
+			width: auto;
+			margin-right: calc(-0.5 * var(--bs-gutter-x));
+			margin-left: calc(-0.5 * var(--bs-gutter-x));
+			@include media-breakpoint-up(lg) {
+				transform: none !important;
+			}
+		}
+		.swiper-slide {
+			height: auto;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sReadAlso

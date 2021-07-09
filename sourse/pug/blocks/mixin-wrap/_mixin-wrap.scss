@@ -1,10 +1,8 @@
- 
-	  
-.soc{
+.soc {
 	display: flex;
 	@include roww(24px);
 
-	&__item{
+	&__item {
 		text-decoration: none !important;
 		background: #303338;
 		color: #fff;
@@ -14,23 +12,19 @@
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-			color: #FFBA72;
+		&:hover {
+			color: #ffba72;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(15);
 	}
-	 
-
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -43,15 +37,15 @@
 	position: relative;
 
 	.waves {
-		position:relative;
+		position: relative;
 		width: 100%;
 		height: 150px;
-		margin-bottom:-7px; /*Fix for safari gap*/
-		min-height:100px;
-		max-height:150px;
+		margin-bottom: -7px; /*Fix for safari gap*/
+		min-height: 100px;
+		max-height: 150px;
 	}
 	.parallax > use {
-		animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+		animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 	}
 	.parallax > use:nth-child(1) {
 		animation-delay: -2s;
@@ -73,22 +67,74 @@
 
 @keyframes move-forever {
 	0% {
-	 transform: translate3d(-90px,0,0);
+		transform: translate3d(-90px, 0, 0);
 	}
-	100% { 
-		transform: translate3d(85px,0,0);
+	100% {
+		transform: translate3d(85px, 0, 0);
 	}
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
 	.waves {
-		height:40px;
-		min-height:40px;
+		height: 40px;
+		min-height: 40px;
 	}
 	.content {
-		height:30vh;
+		height: 30vh;
 	}
 	h1 {
-		font-size:24px;
+		font-size: 24px;
+	}
+}
+
+.breadcrumbs-inner {
+	.breadcrumb {
+		padding-top: 0;
+		margin-bottom: 0;
+		padding-bottom: calc(var(--bs-gutter-x) / 2);
+		--bs-gutter-x: #{rem(24)};
+		& > * {
+			padding-left: calc(var(--bs-gutter-x) / 2);
+			padding-right: calc(var(--bs-gutter-x) / 2);
+		}
+		.breadcrumb-item {
+			margin-bottom: 0;
+			position: relative;
+			&::after {
+				content: "";
+				@include a-cent(y);
+				width: 2px;
+				height: 2px;
+				right: -1px;
+				border-radius: 50%;
+
+				background-color: #cfcfcf;
+			}
+			&:last-child {
+				&::after {
+					content: none;
+				}
+			}
+		}
+		a {
+			border: none;
+			padding: calc(var(--bs-gutter-x) / 2) 0;
+			&::before {
+				content: none;
+			}
+			&:hover {
+				border: none;
+				span {
+					color: $body-color;
+				}
+			}
+			span {
+				@include mt;
+				font-family: PT Sans;
+				font-size: rem(14);
+				line-height: (18 / 14);
+				color: #cfcfcf;
+			}
+		}
 	}
 }

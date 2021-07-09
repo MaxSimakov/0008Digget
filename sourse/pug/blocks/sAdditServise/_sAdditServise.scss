@@ -41,6 +41,7 @@
 		margin-bottom: var(--size);
 		text-decoration: none;
 		height: calc(100% - var(--size));
+		background-color: $white;
 		&:hover {
 			.sAdditServise__title {
 				color: $primary;
@@ -63,8 +64,9 @@
 		align-items: center;
 		width: 28.5%;
 
-		padding: calc(var(--size) / 4);
+		// padding: calc(var(--size) / 4);
 		border-radius: 8px;
+		overflow: hidden;
 		background-color: #e8eef3;
 		img {
 			width: 100%;

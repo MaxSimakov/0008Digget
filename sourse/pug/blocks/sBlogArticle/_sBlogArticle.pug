@@ -1,0 +1,46 @@
+mixin sBlogArticle(data)
+	// start sBlogArticle
+	+b.SECTION.sBlogArticle.section#sBlogArticle&attributes(attributes)
+		+b.section-title
+			h1 Создание одностраничного сайта Landing Page под ключ
+		+e.item
+			+e.heading
+				.row.justify-content-between
+					.col-sm-auto
+						+b.author
+							+pic('ourTeam-2.png','','')(class="author__img")
+							+e.caption
+								+e.name Антон Резник 
+								+e.position Специалист по SMM
+					.col-sm-auto
+						+b.likes-n-views
+							+e.item--time
+								+icon('clock')
+								span 5 минут
+							+e.item--views
+								+icon('eye')
+								span 234324
+							+e.item--likes
+								+icon('heart')
+								span 3
+								span благодарности #[br] за статью
+			+e.content
+				p Лендинг (одностраничный сайт) - один из самых быстрых и эффективных способов для генерации лидов (новых обращений). На его создание требуется меньше времени, чем на создание многостраничного корпоративного сайта. Но конверсия лендинга может достигать ещё больших показателей, чем многостраничник. 
+				p Действительно, всё просто - на одной странице размещается ваш основной товар или услуга для целевой аудитории, которой это может быть интересно. А значит, шансы на привлечение клиента увеличиваются.
+			+e.bottom
+				.row.justify-content-between
+					.col-sm-auto
+						+e.likes
+							+e.BUTTON.btn.btn
+								+icon('heart')
+								span 3
+								span Лайк
+							+e.likeIt Понравилась статья? #[br] Поставьте лайк
+							+e.note Наш КМ очень #[br] просил.
+					.col-sm-auto
+						+e.social
+							<script src="https://yastatic.net/share2/share.js"></script>
+							.ya-share2(data-curtain data-size='l' data-services='facebook,vkontakte,twitter')
+
+
+	// end sBlogArticle

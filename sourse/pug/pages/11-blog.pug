@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sBlogArticle/_sBlogArticle.pug
+include ../blocks/sPopularPosts/_sPopularPosts.pug
+include ../blocks/sReadAlso/_sReadAlso.pug
+include ../blocks/sectionMenu/_sectionMenu.pug
+include ../blocks/sAddComment/_sAddComment.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'digget'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	+header(class="bg-white")
+		+top-nav-inner()
+	+sectionMenu()
+	+breadcrumbs-inner
+	.container
+		.wrapper
+			.row
+				.col-xl-9
+					+sBlogArticle
+					+sReadAlso
+					+sAddComment
+				.col-xl-3
+					+sPopularPosts
+	+footer()
+

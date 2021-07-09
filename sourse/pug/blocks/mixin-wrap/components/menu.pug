@@ -82,3 +82,37 @@ mixin mnu()
 							+e.subtitle Акции, варианты сотрудничества, список партнеров.
 		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") Контакты
 //- /menu
+
+//- menu-inner
+mixin mnu-inner()
+	+b.UL.navMenu--inner(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") Раздел
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") Раздел
+		+e.LI.item.dropdown( itemprop="item" )
+			+e.link Раздел
+			.drop-open
+				img(src="img/svg/chevron-down.svg", alt="")
+			+b.UL.drop
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") 
+						+e.iconWrap
+							img(src="img/svg/submenu-1.svg", alt="")
+						+e.txtWrap
+							+e.title О нас
+							+e.subtitle Раcскажем о наших ценностях. Реквизиты
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") 
+						+e.iconWrap
+							img(src="img/svg/submenu-2.svg", alt="")
+						+e.txtWrap
+							+e.title Партнеры
+							+e.subtitle Акции, варианты сотрудничества, список партнеров.
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") 
+						+e.iconWrap
+							img(src="img/svg/submenu-3.svg", alt="")
+						+e.txtWrap
+							+e.title Вакансии
+							+e.subtitle Акции, варианты сотрудничества, список партнеров.
+			//- +b.Ul.drop
+//- /menu-inner

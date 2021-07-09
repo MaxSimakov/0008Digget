@@ -370,6 +370,13 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		freeMode: true
+	});
+	var sReadAlsoSlider = new Swiper('.sReadAlso__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
 	}); // modal window
 
 	function makeDDGroup(qSelecorts) {

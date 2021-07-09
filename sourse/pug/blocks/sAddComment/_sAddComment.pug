@@ -1,0 +1,16 @@
+mixin sAddComment(data)
+	// start sAddComment
+	+b.sAddComment
+		+form-wrap
+			.row
+				.col-md-6
+					+input('Ваше имя',  t='text', label, name= t)
+				.col-md-6
+					+input('E-mail',  t='text', label, name= t)
+				+input('Ваш комментарий',  t='textarea', label, name= t)
+			.row
+				.col-md-auto
+					+e.btn.btn.btn-primary добавить комментарий
+				.col.d-flex.align-items-center
+					+e.polite Нажимая кнопку, вы соглашаетесь с #[a(href="#") политикой конфиденциальности] и правилами сайта, изложенными в #[a(href="#") пользовательском соглашении].
+	// end sAddComment
