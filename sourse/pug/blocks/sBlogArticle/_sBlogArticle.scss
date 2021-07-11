@@ -181,6 +181,8 @@
 		}
 		.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
 			background-size: 70%;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 	}
 	@include media-breakpoint-up(sm) {
