@@ -1,8 +1,9 @@
 mixin sPopularPosts(data)
 	// start sPopularPosts
 	+b.SECTION.sPopularPosts.section#sPopularPosts&attributes(attributes)
-		+e.img-wrap.bg-wrap.d-none.d-xl-block
-			img.img-bg(src=`img/@2x/cases.png`, alt="")
+		//- +e.img-wrap.bg-wrap.d-none.d-xl-block
+		//- 	img.img-bg(src=`img/@2x/cases.png`, alt="")
+		+pic('cases.png','','').sPopularPosts__img-wrap.d-none.d-xl-block
 		+b.section-title
 			h2 Популярные записи
 		.row

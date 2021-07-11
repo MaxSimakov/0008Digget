@@ -23,6 +23,7 @@
 		overflow: hidden;
 		margin-bottom: calc(var(--size) * 2);
 		img {
+			@extend .img-bg;
 			object-position: center;
 		}
 	}

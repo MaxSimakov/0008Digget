@@ -1,6 +1,9 @@
 mixin sBlogArticle(data)
 	// start sBlogArticle
 	+b.SECTION.sBlogArticle.section#sBlogArticle&attributes(attributes)
+		//- +e.img-wrap.bg-wrap.d-block.d-xl-none
+		//- 	img.img-bg(src=`img/@2x/cases.png`, alt="")
+		+pic('cases.png','','').sBlogArticle__img-wrap.d-block.d-xl-none
 		+b.section-title
 			h1 Создание одностраничного сайта Landing Page под ключ
 		+e.item
