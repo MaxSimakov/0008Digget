@@ -53,14 +53,14 @@
 			margin-bottom: 0;
 			line-height: 132.2%;
 			@include rfs(36px);
-			@include media-breakpoint-up(lg) {
-				max-width: 75%;
+			// @include media-breakpoint-up(lg) {
+			// 	max-width: 75%;
 
-			}
-			@include media-breakpoint-up(xl) {
-				max-width: 90%;
+			// }
+			// @include media-breakpoint-up(xl) {
+			// 	max-width: 90%;
 
-			}
+			// }
 			@include media-breakpoint-up(xxl) {
 				max-width: 860px;
 				font-size: rem(36);
@@ -69,9 +69,9 @@
 	}
 
 	&__item {
-		@include media-breakpoint-up(xl) {
-			max-width: 90%;
-		}
+		// @include media-breakpoint-up(xl) {
+		// 	max-width: 90%;
+		// }
 		margin-bottom: var(--size);
 		&:last-of-type {
 			margin-bottom: 0;
