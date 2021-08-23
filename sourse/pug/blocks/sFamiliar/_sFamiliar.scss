@@ -20,7 +20,7 @@
 
 		h2 {
 			position: relative;
-			display: inline-block;
+			display: inline;
 			font-weight: 500;
 			line-height: (47 / 36);
 			color: #2c2f34;
@@ -34,8 +34,8 @@
 				position: absolute;
 				z-index: -1;
 				bottom: 1px;
-				left: -3%;
-				width: 106%;
+				left: -5px;
+				width: calc(100% + 10px);
 				height: 12px;
 				background-color: #ffba72;
 				@include media-breakpoint-up(lg) {
@@ -49,7 +49,7 @@
 	&__item {
 		margin-bottom: var(--size);
 		// height: calc(100% - var(--size));
-		height: 100%;
+		// height: 100%;
 		p {
 			font-weight: 500;
 			color: #2c2f34;
@@ -83,20 +83,20 @@
 		&--lg {
 			display: flex;
 			flex-direction: column;
-			margin-bottom: 0;
-			p {
-				// display: flex;
-				// align-items: center;
-				flex-grow: 1;
-				margin-bottom: 0;
-				text-align: center;
-				max-width: 240px;
-				margin: 0 auto;
-				font-size: rem(16);
-				@include media-breakpoint-up(xl) {
-					font-size: rem(18);
-				}
-			}
+			margin-bottom: calc(var(--size) * 1.2);
+			// p {
+			// 	// display: flex;
+			// 	// align-items: center;
+			// 	flex-grow: 1;
+			// 	margin-bottom: 0;
+			// 	text-align: center;
+			// 	// max-width: 240px;
+			// 	margin: 0 auto;
+			// 	font-size: rem(16);
+			// 	@include media-breakpoint-up(xl) {
+			// 		font-size: rem(18);
+			// 	}
+			// }
 			.sFamiliar__img-wrap {
 				@include block;
 				overflow: hidden;
@@ -107,9 +107,9 @@
 				margin-bottom: var(--size);
 				margin-left: auto;
 				margin-right: auto;
-				@include media-breakpoint-down(sm) {
-					max-width: 200px;
-				}
+				// @include media-breakpoint-down(sm) {
+				// 	max-width: 200px;
+				// }
 				img {
 					position: absolute;
 					width: 100%;
@@ -160,30 +160,22 @@
 			}
 		}
 	}
-	&__bottom-slider {
-		// padding-bottom: calc(var(--size));
-		@include media-breakpoint-down(lg) {
-			.row {
-				// min-width: 967.44px;
-				flex-wrap: nowrap;
-			}
+	&__bottom {
+		.sFamiliar__img-wrap {
+			border-radius: var(--bd-radius);
 		}
-		.sFamiliar__col {
-			width: 200px;
-			@include media-breakpoint-up(lg) {
-				width: 20%;
-			}
+		h6 {
+			margin-bottom: calc(var(--size) * 0.5);
+			text-align: center;
 		}
-		.swiper-wrapper {
-			width: auto;
-			margin-right: calc(-0.5 * var(--bs-gutter-x));
-			margin-left: calc(-0.5 * var(--bs-gutter-x));
-			@include media-breakpoint-up(lg) {
-				transform: none !important;
-			}
+		a {
+			text-decoration: none;
 		}
-		.swiper-slide {
-			height: auto;
+		p {
+			flex-grow: 1;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 

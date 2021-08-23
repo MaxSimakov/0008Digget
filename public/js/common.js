@@ -349,14 +349,14 @@ function eventHandler() {
 			loadPrevNext: true,
 			loadPrevNextAmount: 8
 		}
-	});
-	var sFamiliarSlider = new Swiper('.sFamiliar__bottom-slider--js', {
-		freeModeMomentum: true,
-		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		freeMode: true
-	});
+	}); // let sFamiliarSlider = new Swiper('.sFamiliar__bottom-slider--js', {
+	// 	freeModeMomentum: true,
+	// 	watchOverflow: true,
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+	// 	freeMode: true,		
+	// });
+
 	var sWeMakeSlider = new Swiper('.sWeMake__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,

@@ -350,13 +350,13 @@ function eventHandler() {
 			loadPrevNextAmount: 8,
 		},
 	});
-	let sFamiliarSlider = new Swiper('.sFamiliar__bottom-slider--js', {
-		freeModeMomentum: true,
-		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		freeMode: true,		
-	});
+	// let sFamiliarSlider = new Swiper('.sFamiliar__bottom-slider--js', {
+	// 	freeModeMomentum: true,
+	// 	watchOverflow: true,
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+	// 	freeMode: true,		
+	// });
 	let sWeMakeSlider = new Swiper('.sWeMake__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,

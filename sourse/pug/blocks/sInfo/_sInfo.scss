@@ -19,14 +19,26 @@
 	border-radius: 8px;
 	margin-bottom: calc(var(--size) * 1.3);
 	&__img-wrap {
+		position: relative;
 		margin-right: auto;
 		margin-bottom: calc(var(--size) * 1.3);
+		min-width: 43px;
+		height: 51px;
+		&::before {
+			content: url(../img/@2x/info-1.png);
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
 
 		@include media-breakpoint-up(sm) {
 			margin: auto 0;
 			margin-right: calc(var(--size) * 1.3);
 		}
 		.icon {
+			display: none;
 			color: $secondary;
 			font-size: rem(51);
 		}
