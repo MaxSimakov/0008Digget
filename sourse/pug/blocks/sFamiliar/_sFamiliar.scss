@@ -172,7 +172,9 @@
 			text-decoration: none;
 		}
 		p {
+			font-family: PT Sans;
 			flex-grow: 1;
+			font-weight: normal;
 			&:last-child {
 				margin-bottom: 0;
 			}
