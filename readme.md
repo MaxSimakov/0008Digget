@@ -9,3 +9,4 @@
 1. <https://maxsimakov.github.io/0008Digget/public/09-portfolio.html>
 1. <https://maxsimakov.github.io/0008Digget/public/10-feedback.html>
 1. <https://maxsimakov.github.io/0008Digget/public/11-blog.html>
+1. <https://maxsimakov.github.io/0008Digget/public/12-card.html>
