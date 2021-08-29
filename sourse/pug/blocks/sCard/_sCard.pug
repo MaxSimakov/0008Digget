@@ -151,5 +151,29 @@ mixin sCard(data)
 			.row.row--cards
 				+item-horisontal(1, `Много обращений, но мало продаж?`).col-md-6.col-xxl
 				+item-horisontal(2, `Много обращений, но мало продаж?`, `9px`, 'orange').col-md-6.col-xxl
-
+		br
+		br
+		br
+		.container
+			.row.row--cards
+				mixin card-list(ol, c, p, ...items)
+					- let listBgColor = (c ? `--list-bg-color: ${c}` : ``)
+					- let pseudoBgColor = (p ? `--pseudo-bg-color: ${p}` : ``)
+					+b.card-list(style=`${listBgColor}; ${pseudoBgColor}`)
+						if ol
+							ol
+								each item in items
+									li!= item
+						else
+							ul
+								each item in items
+									li!= item
+				.col-lg-6
+					+card-list(``, ``, ``, `Список`, `Список`, `Список`, `Список`)
+				.col-lg-6
+					+card-list(`ol`, ``, ``, `Список`, `Список`, `Список`, `Список`)
+				.col-lg-6
+					+card-list(`ol`, `#F2FFF3`, `red`, `Список`, `Список`, `Список`, `Список`)
+				.col-lg-6
+					+card-list(``, `#F0F0F1`, `green`, `Список`, `Список`, `Список`, `Список`)
 	// end sCard
