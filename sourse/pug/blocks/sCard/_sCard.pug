@@ -1,17 +1,75 @@
+mixin card-list(ol, c, p, ...items)
+	- let listBgColor = (c ? `--list-bg-color: ${c}` : ``)
+	- let pseudoBgColor = (p ? `--pseudo-bg-color: ${p}` : ``)
+	+b.card-list(style=`${listBgColor}; ${pseudoBgColor}`)
+		if ol
+			ol
+				each item in items
+					li!= item
+		else
+			ul
+				each item in items
+					li!= item
+
+mixin item-vertical(i, t, r, c)
+	.col-12&attributes(attributes)
+		- let color = (c ? `--img-bg-color: ${c}` : ``)
+		- let radius = (r ? `--img-bd-radius: ${r}` : ``)
+		+b.card-item--vertical(style=`${radius}; ${color}`)
+			+e.img-wrap.bg-wrap
+				+pic(`ourTeam-${i}.png`,'','')
+				//- img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
+			h6!= t
+			block
+
+mixin item-colored(h2, h6, i, c)
+	.col-12&attributes(attributes)
+		- let bgColor = (c ? `--item-bg-color: ${c}` : ``)
+		+b.card-item--colored(style=`${bgColor}`)
+			if h2
+				h2!= h2
+			if h6
+				h6!= h6
+			if i
+				+e.img-wrap.bg-wrap
+					img.res-i(src=`img/svg/opportunity-${i}.svg`, alt="")
+			block
+
+mixin item-horisontal(i, t, r, c)
+	.col-12&attributes(attributes)
+		- let color = (c ? `--img-bg-color: ${c}` : ``)
+		- let radius = (r ? `--img-bd-radius: ${r}` : ``)
+		+b.card-item--horisontal(style=`${radius}; ${color}`)
+			+e.img-wrap.bg-wrap
+				+pic(`ourTeam-${i}.png`,'','')
+				//- img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
+			+e.caption
+				h6!= t
+				block
+
+
+
 mixin sCard(data)
 	// start sCard
 	+b.SECTION.sCard.section#sCard&attributes(attributes)
 		.container
 			.row.row--cards
-				mixin item-vertical(i, t, r, c)
-					.col-12&attributes(attributes)
-						- let color = (c ? `--img-bg-color: ${c}` : ``)
-						- let radius = (r ? `--img-bd-radius: ${r}` : ``)
-						+b.card-item--vertical(style=`${radius}; ${color}`)
-							+e.img-wrap.bg-wrap
-								img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
-							h6!= t
-							block
+				+item-colored(``, `Гибкость`, ``).col-md-6.col-lg-3.col-xxl
+					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+				+item-colored(``, ``, `1`).col-md-6.col-lg-3.col-xxl-1
+				+item-colored(``, `Гибкость`, ``).col-md-6.col-lg-3.col-xxl
+					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+				+item-colored(``, `Гибкость`, ``).col-md-6.col-lg-3.col-xxl
+					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+				+item-colored(``, ``, `2`).col-md-6.col-lg-3.col-xxl-1
+				+item-colored(``, `Гибкость`, ``).col-md-6.col-lg-3.col-xxl
+					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+
+		br
+		br
+		br
+		.container
+			.row.row--cards
 				+item-vertical(1, `У конкурентов сайт круче, чем ваш?`).col-sm-6.col-md-4.col-xxl
 					p В среднем, это 14-20 рабочих дней для лендинга или #[a(href='#') одностраничных сайтов], 5-7 недель для корпоративных сайтов.
 				+item-vertical(2, `У конкурентов сайт круче, чем ваш?`, `9px`).col-sm-6.col-md-4.col-xxl
@@ -60,62 +118,48 @@ mixin sCard(data)
 		br
 		.container
 			.row.row--cards
-				mixin item-colored(t, c)
-					.col-12&attributes(attributes)
-						- let bgColor = (c ? `--item-bg-color: ${c}` : ``)
-						+b.card-item--colored(style=`${bgColor}`)
-							h2!= t
-							block
-				+item-colored(`Гибкость`).col-md-6.col-lg-3.col-xxl
+				+item-colored(`Гибкость`, ``, ``).col-md-6.col-lg-3.col-xxl
 					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`).col-md-6.col-lg-3.col-xxl
+				+item-colored(`Гибкость`, ``, ``).col-md-6.col-lg-3.col-xxl
 					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`).col-md-6.col-lg-3.col-xxl
+				+item-colored(`Гибкость`, ``, ``).col-md-6.col-lg-3.col-xxl
 					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`).col-md-6.col-lg-3.col-xxl
+				+item-colored(`Гибкость`, ``, ``).col-md-6.col-lg-3.col-xxl
 					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
 		br
 		br
 		br
 		.container
 			.row.row--cards
-				+item-colored(`Гибкость`, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
+				+item-colored(`Гибкость`, ``, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
 					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
+				+item-colored(`Гибкость`, ``, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
 					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
-					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-		br
-		br
-		br
-		.container
-			.row.row--cards
-				+item-colored(`Гибкость`, `#F2FFF3`).col-md-6.col-xxl
-					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
-				+item-colored(`Гибкость`, `#F2FFF3`).col-md-6.col-xxl
+				+item-colored(`Гибкость`, ``, `#F0F0F1`).col-md-6.col-lg-4.col-xxl
 					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
 		br
 		br
 		br
 		.container
 			.row.row--cards
-				+item-colored(`Гибкость`)
+				+item-colored(`Гибкость`, ``, `#F2FFF3`).col-md-6.col-xxl
+					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+					+card-list(``, `transparent`, ``, `Список`, `Список`, `Список`, `Список`)
+				+item-colored(`Гибкость`, ``, `#F2FFF3`).col-md-6.col-xxl
+					p Находимся внутри и вне трендов, придумываем #[a(href='#') нестандартные решения] и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
+					+card-list(`ol`, `transparent`, `cyan`, `Список`, `Список`, `Список`, `Список`)
+		br
+		br
+		br
+		.container
+			.row.row--cards
+				+item-colored(`Гибкость`, ``, ``)
 					p Находимся внутри и вне трендов, придумываем нестандартные решения  и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
 		br
 		br
 		br
 		.container
 			.row.row--cards
-				mixin item-horisontal(i, t, r, c)
-					.col-12&attributes(attributes)
-						- let color = (c ? `--img-bg-color: ${c}` : ``)
-						- let radius = (r ? `--img-bd-radius: ${r}` : ``)
-						+b.card-item--horisontal(style=`${radius}; ${color}`)
-							+e.img-wrap.bg-wrap
-								img.res-i(src=`img/@2x/ourTeam-${i}.png`, alt="")
-							+e.caption
-								h6!= t
-								block
 				+item-horisontal(1, `Много обращений, но мало продаж?`).col-md-6.col-xl-3.col-xxl
 					p Находимся внутри и вне трендов, придумываем нестандартные решения и подбираем для каждого клиента тот язык, на котором мы будем понимать друг друга.
 				+item-horisontal(2, `Много обращений, но мало продаж?`, `9px`).col-md-6.col-xl-3.col-xxl
@@ -156,18 +200,6 @@ mixin sCard(data)
 		br
 		.container
 			.row.row--cards
-				mixin card-list(ol, c, p, ...items)
-					- let listBgColor = (c ? `--list-bg-color: ${c}` : ``)
-					- let pseudoBgColor = (p ? `--pseudo-bg-color: ${p}` : ``)
-					+b.card-list(style=`${listBgColor}; ${pseudoBgColor}`)
-						if ol
-							ol
-								each item in items
-									li!= item
-						else
-							ul
-								each item in items
-									li!= item
 				.col-lg-6
 					+card-list(``, ``, ``, `Список`, `Список`, `Список`, `Список`)
 				.col-lg-6
