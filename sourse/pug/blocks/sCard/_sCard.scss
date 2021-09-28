@@ -16,7 +16,9 @@
 
 .card-item {
 	--size: #{rem(24)};
-	height: 100%;
+	// height: 100%;
+	min-height: calc(100% - var(--bs-gutter-x));
+	margin-bottom: var(--bs-gutter-x);
 	// @include media-breakpoint-up(md) {
 	// 	--size: #{rem(24)};
 	// }
@@ -34,11 +36,14 @@
 	p {
 		color: #2c2f34;
 		font-family: PT Sans;
-		flex-grow: 1;
+		// flex-grow: 1;
 		font-weight: normal;
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+	div {
+		font-family: PT Sans;
 	}
 	.card-item__img-wrap {
 		@include block;
@@ -166,7 +171,9 @@
 			padding-left: rem(18);
 			&::before {
 				content: "";
-				@include a-cent(y);
+				position: absolute;
+				// @include a-cent(y);
+				top: 8px;
 				width: 6px;
 				height: 6px;
 				left: 0;
@@ -183,7 +190,9 @@
 			&::before {
 				content: counter(num);
 				counter-increment: num;
-				@include a-cent(y);
+				// @include a-cent(y);
+				position: absolute;
+				top: 4px;
 				left: calc(17px / 2);
 				transform: translateX(-50%);
 				height: 17px;
@@ -194,7 +203,9 @@
 			}
 			&::after {
 				content: "";
-				@include a-cent(y);
+				position: absolute;
+				// @include a-cent(y);
+				top: 4px;
 				left: 0;
 				width: 17px;
 				height: 17px;
@@ -207,5 +218,5 @@
 
 .row--cards {
 	--bs-gutter-x: #{rem(25)};
-	--bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
+	// --bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
 }
