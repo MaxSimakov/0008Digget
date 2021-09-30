@@ -220,3 +220,9 @@
 	--bs-gutter-x: #{rem(25)};
 	// --bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
 }
+
+.entry-content {
+	p {
+		font-family: PT Sans;
+	}
+}

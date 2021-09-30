@@ -54,7 +54,9 @@
 			padding-left: rem(18);
 			&::before {
 				content: "";
-				@include a-cent(y);
+				position: absolute;
+				// @include a-cent(y);
+				top: 9px;
 				width: 6px;
 				height: 6px;
 				left: 0;
@@ -71,7 +73,9 @@
 			&::before {
 				content: counter(num);
 				counter-increment: num;
-				@include a-cent(y);
+				// @include a-cent(y);
+				position: absolute;
+				top: 4px;
 				left: calc(17px / 2);
 				transform: translateX(-50%);
 				height: 17px;
@@ -82,7 +86,9 @@
 			}
 			&::after {
 				content: "";
-				@include a-cent(y);
+				position: absolute;
+				// @include a-cent(y);
+				top: 4px;
 				left: 0;
 				width: 17px;
 				height: 17px;
